@@ -6,6 +6,7 @@ pub fn execute_rofi(value: &str) -> String {
     let process = Command::new("rofi")
         .arg("-dmenu")
         .arg("-lines")
+        .arg("-i")
         .arg("5")
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
