@@ -4,9 +4,9 @@ use std::process::{Command, Stdio};
 
 pub fn execute_rofi(value: &str) -> String {
     let process = Command::new("rofi")
+        .arg("-i")
         .arg("-dmenu")
         .arg("-lines")
-        .arg("-i")
         .arg("5")
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
